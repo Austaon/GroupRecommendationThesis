@@ -34,7 +34,7 @@ The files need to be unzipped to make those pages work.
 
 # Dependencies:
 
-* PHP:
+* PHP (`composer.json`):
   * "php": "^7.4"
   * "ext-json": "*"
   * "fedeisas/laravel-mail-css-inliner": "^3.0",
@@ -49,7 +49,7 @@ The files need to be unzipped to make those pages work.
   * "laravelcollective/annotations": "^7.0",
   * "laravelcollective/html": "^6.1"
 
-* JavaScript:
+* JavaScript (`package.json`):
   * "apexcharts": "^3.22.0",
   * "bootstrap-icons": "^1.0.0",
   * "bootstrap-vue": "^2.18.1",
