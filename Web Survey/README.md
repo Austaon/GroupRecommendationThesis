@@ -27,7 +27,8 @@ sent to), uncomment the `'to' => []` part in the `config/mail.php` file and fill
 # Running
 Run `php artisan serve` to start a Laravel server.
 
-Run `npm run watch` or `npm run dev` to compile the Javascript code. 
+Run `npm run watch` or `npm run dev` to compile the Javascript code and everything else that is needed for the front-end.
+The email templates (found in `resources/mail`) are also compiled in this step to the `resources/views/emails` folder.
 
 Some data, which is only used in unfinished pages, is zipped up in the `resources/js/data` folder.
 The files need to be unzipped to make those pages work.
