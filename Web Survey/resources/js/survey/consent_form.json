@@ -1,0 +1,102 @@
+{
+    "pages": [
+        {
+            "name": "consent_form",
+            "elements": [
+                {
+                    "type": "matrix",
+                    "name": "first_questions",
+                    "title": "Taking part in the study",
+                    "isRequired": true,
+                    "columns": [
+                        "Yes",
+                        "No"
+                    ],
+                    "rows": [
+                        {
+                            "value": "read_and_understood",
+                            "text": "I have read and understood the study information dated ${this.currentDate}, or it has been read to me. I have been able to ask questions about the study and my questions have been answered to my satisfaction."
+                        },
+                        {
+                            "value": "consent_voluntarily",
+                            "text": "I consent voluntarily to be a participant in this study and understand that I can refuse to answer questions and I can withdraw from the study at any time, without having to give a reason."
+                        },
+                        {
+                            "value": "data_storage",
+                            "text": "I understand that taking part in the study involves storing my email address and Spotify user id. Additionally, I understand that taking part in the study involves selecting songs and filling in a survey."
+                        }
+                    ]
+                },
+                {
+                    "type": "matrix",
+                    "name": "use_of_information",
+                    "title": "Use of the information in the study",
+                    "isRequired": true,
+                    "columns": [
+                        {
+                            "value": "Yes",
+                            "text": "Yes"
+                        },
+                        {
+                            "value": "No",
+                            "text": "No"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "value": "information_provide",
+                            "text": "I understand that information I provide will be used for thesis research."
+                        },
+                        {
+                            "value": "data_will_not_be_shared",
+                            "text": "I understand that personal information collected about me that can identify me, such as my email address, will not be shared beyond the study team. "
+                        }
+                    ]
+                },
+                {
+                    "type": "matrix",
+                    "name": "further_use",
+                    "title": "Future use and reuse of the information by others",
+                    "isRequired": true,
+                    "columns": [
+                        {
+                            "value": "Yes",
+                            "text": "Yes"
+                        },
+                        {
+                            "value": "No",
+                            "text": "No"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "value": "permission_further_use",
+                            "text": "I give permission for the playlists, selected tracks and potential feedback that I provide so it can be used for future research and learning."
+                        }
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "name": "consent_checkbox",
+                    "visibleIf": "{first_questions.read_and_understood} = 'Yes' and {first_questions.consent_voluntarily} = 'Yes' and {first_questions.data_storage} = 'Yes' and {use_of_information.information_provide} = 'Yes' and {use_of_information.data_will_not_be_shared} = 'Yes' and {further_use.permission_further_use} = 'Yes'",
+                    "title": "By ticking the box below, you consent that you are willing to answer the questions in this survey.",
+                    "isRequired": true,
+                    "choices": [
+                        {
+                            "value": "consent_tickbox",
+                            "text": "I consent"
+                        }
+                    ]
+                }
+            ],
+            "title": "Consent Form"
+        }
+    ],
+    "triggers": [
+        {
+            "type": "setvalue",
+            "expression": "{first_questions.consent_voluntarily} = 'No' or {first_questions.data_storage} = 'No' or {first_questions.read_and_understood} = 'No' or {further_use.permission_further_use} = 'No' or {use_of_information.data_will_not_be_shared} = 'No' or {use_of_information.information_provide} = 'No'",
+            "setToName": "consent_checkbox"
+        }
+    ]
+}

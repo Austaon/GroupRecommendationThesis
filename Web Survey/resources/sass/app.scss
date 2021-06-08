@@ -1,0 +1,102 @@
+//
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-vue/dist/bootstrap-vue.css";
+
+.body {
+    background-color: #F6EEFF;
+}
+
+.py-4 > .container {
+    background-color: #FFF;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 20);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+td {
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.trackList {
+    a {
+        max-width: 70%;
+        display: inline-block;
+    }
+
+    button {
+        display: inline;
+        position: absolute;
+        right: 0;
+        margin-top: -10px;
+        margin-right: 32px;
+
+        svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+    }
+}
+
+#sessionIdInput.incorrectSession {
+    background-color: #f54733;
+    color: #CCCCCC;
+}
+
+#preSurveyState {
+    margin-top: 3.5em;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+
+    button {
+        margin-top: 10%;
+    }
+}
+
+#surveyContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#submitCreateSessionButton {
+    margin-top: 2%;
+}
+
+#filledInTracks {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.card-footer {
+    background-color: transparent !important;
+    border-top: none !important;
+}
+
+.consentForm {
+    margin-left: 5%;
+}
+
+#surveyContainer {
+    padding-right: 0 !important;
+}
+
+.adminCenter {
+    justify-content: center;
+}
+
+#adminComponentDiv {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.adminTable {
+    table-layout: fixed;
+}
+
+.clickable-icon {
+    cursor: pointer;
+}

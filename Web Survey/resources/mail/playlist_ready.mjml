@@ -1,0 +1,34 @@
+<mjml>
+	<mj-body>
+		<mj-section background-color="#f0f0f0">
+		<mj-column>
+            <mj-text font-weight="600"
+        	    font-family="'Montserrat', sans-serif"
+                font-style="normal"
+                font-size="30px"
+                color="#6AE368"
+                padding-top="10%">Spotify Survey</mj-text>
+                <mj-image width="64px"
+                    src="https://image.flaticon.com/icons/png/512/72/72075.png"/>
+        </mj-column>
+			<mj-column>
+				<mj-text>
+                    Hi there! This email was sent to let you know that everyone has filled in their tracks for the session {{$sessionName}}!
+                    Click on the button to see the results.
+                    <br/>
+                    <br/>
+                </mj-text>
+                <mj-button font-family="Helvetica" background-color="#6AE368" color="#1c1d21" href="{{route('session_room', ['session' => $sessionId ])}}">
+                    Go to session!
+                </mj-button>
+                <mj-text>
+                            If this button does not work, you can also visit: {{route('session_room', ["session" => $sessionId ])}}
+                </mj-text>
+                <mj-text>
+                            If you want to have your email address and other user data deleted, visit this link:
+                            {{route('delete_user_from_session_gui', ["session" => $sessionObject ])}}
+				</mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>

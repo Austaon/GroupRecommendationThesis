@@ -1,0 +1,40 @@
+<mjml>
+	<mj-body>
+		<mj-section background-color="#f0f0f0">
+		    <mj-column>
+		        <mj-text font-weight="600"
+		                 font-family="'Montserrat', sans-serif"
+                         font-style="normal"
+                         font-size="30px"
+                         color="#6AE368"
+                         padding-top="10%">Spotify Survey</mj-text>
+                <mj-image width="64px"
+                      src="https://image.flaticon.com/icons/png/512/72/72075.png"/>
+            </mj-column>
+		    <mj-column>
+				<mj-text>
+				    Hi there! This is your invitation to participate in my research by joining session '{{$sessionName}}'.
+					This experiment aims to study different group recommender algorithms.
+					In order to join you will need to login with your Spotify account.
+
+                    Your participation is entirely voluntary, and you can withdraw at any time.
+                    There is a link to delete your data from the server below. To start, click the link below.
+                    This will send you to a page where you will be asked to explicitly give consent and where you can join the session.
+
+                    <br/>
+                    <br/>
+                </mj-text>
+                <mj-button font-family="Helvetica" background-color="#6AE368" color="#1c1d21" href="{{route('join_new_user', ['session' => $sessionString ])}}">
+                    Go to session
+                </mj-button>
+                <mj-text>
+                    If this button does not work, you can also visit: {{route('join_new_user', ["session" => $sessionString ])}}
+                </mj-text>
+                <mj-text>
+                    If you want to have your email address and other user data deleted, visit this link:
+                    {{route('delete_user_from_session_gui', ["session" => $sessionString ])}}
+				</mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>
