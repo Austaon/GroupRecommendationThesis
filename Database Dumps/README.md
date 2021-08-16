@@ -43,7 +43,7 @@ Sessions also contain multiple users.
 ### `survey` document
 Documentation for the survey result. 
 Replace * with 1, 2, or 3 and & with "like", "suitable", or "selection".
-Only exception is `playlist3_like_feedback` can instead be found at `playlist3_like_specific` due to a mistake in setting up the survey.
+Only exception is that `playlist3_like_feedback` can instead be found at `playlist3_like_specific` due to a mistake in setting up the survey.
 
 | Name          | Type          | Notes        |
 | ------------- |:-------------:|:------------:|
@@ -59,10 +59,10 @@ Only exception is `playlist3_like_feedback` can instead be found at `playlist3_l
 
 # `track_data` collection
 An explanation of the acoustic features can be found at: https://developer.spotify.com/documentation/web-api/reference/#object-audiofeaturesobject .
-If a track has audio features with a value of -1 it means Spotify did not have audio feature data available when it was retrieved.
+Some tracks have audio features with a value of -1, which means Spotify did not have audio feature data available when it was retrieved.
 
 If the track data originated from the Skip Prediction Challenge dataset, the artist and track name are unavailable,
-and the track id is not a Spotify id that can be used easily.
+and the track id is not a Spotify id.
 
 | Name          | Type          | Notes        |
 | ------------- |:-------------:|:------------:|
@@ -110,6 +110,6 @@ The Artists field are empty in `random` or `recommended`.
 | hovered_tracks | Array        | Empty |
 | seen_tracks   | Array         | Empty  |
 | survey        | Object        | Contains historical or generated data |
-| %             | Object        | Denotes the type of the data mentioned above |
+| %             | Object        | (In survey) Denotes the type of the data |
 | &_*_term      | Array         | (In %) Contains track or artist data |
 

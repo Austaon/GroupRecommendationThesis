@@ -13,6 +13,8 @@ def get_experiment_stats():
     user_count = 0
     left_feedback = 0
 
+    number_of_users_in_group = []
+
     track_set = set()
     chosen_track_set = set()
     hovered_track_set = set()
@@ -27,6 +29,9 @@ def get_experiment_stats():
 
     for session in Session.get_completed_sessions():
         session_count += 1
+
+        number_of_users_in_group.append(session.get_number_of_users(skip_without_survey=False))
+
         for user in session.get_users_with_tracks_from_session():
             user_count += 1
 
@@ -67,6 +72,9 @@ def get_experiment_stats():
 
     print(f"Total completed sessions: {session_count}")
     print(f"Total users: {filled_in_survey} / {user_count}")
+    print(f"Number of users in a group: {number_of_users_in_group}, mean: {statistics.median(number_of_users_in_group)}")
+
+    print("")
     print(f"Total unique tracks: {len(track_set)}")
     print(f"Total chosen tracks: {len(chosen_track_set)}, non-unique: {track_count}")
     print(f"Total hovered tracks: {len(hovered_track_set)}, is subset: {chosen_track_set.issubset(hovered_track_set)}")

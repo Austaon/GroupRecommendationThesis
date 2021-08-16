@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"laravel.jobs"},{"v":{"$numberInt":"2"},"key":{"queue":{"$numberInt":"1"}},"name":"queue_1","ns":"laravel.jobs"}],"uuid":"0d3ef525012745048375d312a421f475"}

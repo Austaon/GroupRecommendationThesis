@@ -83,13 +83,13 @@ def plot_boundaries():
 
             ax1.vlines(
                 [min_boundary, max_boundary], ymin=0, ymax=max_y_value,
-                linewidth=2, color="red", label="Boundary"
+                linewidth=2, color="#d95f02", label="Boundary"
             )
 
             ax1.set_xlim(right=1.0)
 
             ax2 = ax1.twinx()
-            ax2.plot(kde_bins, np.exp(log_score), color="orange", label="KDE", linewidth=2)
+            ax2.plot(kde_bins, np.exp(log_score), color="#1b9e77", label="KDE", linewidth=2)
             ax2.set_ylim(bottom=0)
             ax2.set_xlim(right=1.0)
 
@@ -124,7 +124,7 @@ def plot_boundaries():
         # 4: KDE
         order = [0, 3, 4, 1, 2]
 
-        fig.suptitle(f"Example boundaries, user {user.email_address}", fontsize=20)
+        fig.suptitle(f"Example boundaries, user {'A' if count == 11 else 'B'}", fontsize=20)
         fig.tight_layout()
         fig.legend(
             [handles[idx] for idx in order], [labels[idx] for idx in order],

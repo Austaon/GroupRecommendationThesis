@@ -35,14 +35,14 @@ class Session(Document):
                 continue
             yield user
 
-    def get_number_of_users(self):
+    def get_number_of_users(self, skip_without_survey=True):
         """
         Returns the number of users with a completed survey in the current session
         :return:
         """
         count = 0
         for user in SessionUser.objects(session_id=self.session_id):
-            if not user.survey:
+            if skip_without_survey and not user.survey:
                 continue
             count += 1
         return count

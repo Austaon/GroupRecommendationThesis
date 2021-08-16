@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"anonymous.sessions"}],"uuid":"a734b75a05ce4270b7fa96b09836a08b"}
