@@ -1,7 +1,12 @@
-cff-version: "1.2.0"
-authors: 
-  - family-names: "Bánsági"
-    given-names: "Aurél"
-date-released: 2021-08-27
+cff-version: 1.2.0
 message: "If you use this software, please cite it using these metadata."
+authors:
+  -
+    affiliation: "Delft University of Technology"
+    family-names: "Bánsági"
+    given-names: "Aurél"
 title: "Your Turn to Roll: Exploring gaps in group recommendation research"
+version: 1.0
+doi: "10.5281/zenodo.5211465"
+date-released: 2021-08-27
+url: "https://github.com/Austaon/GroupRecommendationThesis"
