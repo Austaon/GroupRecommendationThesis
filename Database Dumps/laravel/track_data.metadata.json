@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"laravel.track_data"}],"uuid":"6261590f790144eb9d996b59cb4b773f"}
